@@ -4,8 +4,6 @@ A Gen AI-powered application that generates trading ideas based on market data a
 
 ## Features
 
-- Automated data extraction from JSON sources
-- Web scraping of relevant trading URLs
 - PDF generation from extracted data
 - Vector embeddings creation using LlamaIndex
 - RESTful API endpoints for trading idea generation
@@ -25,7 +23,6 @@ A Gen AI-powered application that generates trading ideas based on market data a
 - **APScheduler**: For scheduling background tasks
 - **FPDF**: PDF generation
 - **Python concurrent.futures**: Parallel processing
-- **dotenv**: Environment variable management
 - **Logging**: Custom configured logging system
 
 
