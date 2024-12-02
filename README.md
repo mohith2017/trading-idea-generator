@@ -33,7 +33,7 @@ An AI-powered application that generates trading ideas based on market data and 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-repo/trading-idea-generator.git
+git clone git@github.com:mohith2017/trading-idea-generator.git
 ```
 
 2. Install dependencies:
