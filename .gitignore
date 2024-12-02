@@ -1,0 +1,9 @@
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.env
+app.log
+**/data_dir/
+**/vector_store/
+**/pdf_files/
+**/.DS_Store

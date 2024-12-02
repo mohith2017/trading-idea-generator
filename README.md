@@ -1,0 +1,67 @@
+# Trading Idea Generator
+
+An AI-powered application that generates trading ideas based on market data and research using LlamaIndex and OpenAI.
+
+## Features
+
+- Automated data extraction from JSON sources
+- Web scraping of relevant trading URLs
+- PDF generation from extracted data
+- Vector embeddings creation using LlamaIndex
+- RESTful API endpoints for trading idea generation
+- Scheduled background jobs for data processing
+- Comprehensive logging system
+- Parallel processing for optimal performance
+
+## Sample output
+![Sample Output](https://i.ibb.co/MsZDcCt/Output-trading.png)
+
+
+## Tech Stack
+
+- **FastAPI**: Modern web framework for building APIs
+- **LlamaIndex**: For document processing and vector embeddings
+- **OpenAI**: AI models for text processing and embeddings
+- **APScheduler**: For scheduling background tasks
+- **FPDF**: PDF generation
+- **Python concurrent.futures**: Parallel processing
+- **dotenv**: Environment variable management
+- **Logging**: Custom configured logging system
+
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-repo/trading-idea-generator.git
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Set up environment variables:
+```bash
+cp .env.example .env
+```
+Set the `OPENAI_API_KEY` in the `.env` file.
+
+4. Create vector embeddings:
+- Download the JSON file directory and place them in the `src/data/downloaded_files/` directory.
+- Unzip the data_dir.zip file in the `src/data/downloaded_files/` directory.
+
+
+5. Run the application:
+```bash
+uvicorn src.main:app --reload
+```
+This automatically creates the vector embeddings and stores them in the `src/data/vector_store` directory. And starts the FastAPI server.
+
+6. Test the API endpoints:
+-   You can test the API endpoints using the FastAPI interactive API docs, which are available at `http://127.0.0.1:8000/docs`.
+
+Or use `curl` or any other HTTP client to test the endpoints.
+```bash
+curl -X POST "http://127.0.0.1:8000/v1/generate" -H "Content-Type: application/json
+```
