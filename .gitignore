@@ -7,3 +7,4 @@ app.log
 **/vector_store/
 **/pdf_files/
 **/.DS_Store
+.pytest_cache/

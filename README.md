@@ -1,6 +1,6 @@
 # Trading Idea Generator
 
-An AI-powered application that generates trading ideas based on market data and research using LlamaIndex and OpenAI.
+A Gen AI-powered application that generates trading ideas based on market data and research using RAG(llamaIndex and OpenAI).
 
 ## Features
 
@@ -34,6 +34,7 @@ An AI-powered application that generates trading ideas based on market data and 
 1. Clone the repository:
 ```bash
 git clone git@github.com:mohith2017/trading-idea-generator.git
+cd trading-idea-generator
 ```
 
 2. Install dependencies:
@@ -47,7 +48,7 @@ cp .env.example .env
 ```
 Set the `OPENAI_API_KEY` in the `.env` file.
 
-4. Create vector embeddings:
+4. Create vector embeddings: (This is only done once in the startup of the application)
 - Download the JSON file directory and place them in the `src/data/downloaded_files/` directory.
 - Unzip the data_dir.zip file in the `src/data/downloaded_files/` directory.
 
@@ -64,4 +65,11 @@ This automatically creates the vector embeddings and stores them in the `src/dat
 Or use `curl` or any other HTTP client to test the endpoints.
 ```bash
 curl -X POST "http://127.0.0.1:8000/v1/generate" -H "Content-Type: application/json
+```
+
+## Testing
+To run the tests, use the following command:
+```bash
+cd trading-idea-generator
+python -m pytest tests/
 ```
